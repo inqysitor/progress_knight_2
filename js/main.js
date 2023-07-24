@@ -945,7 +945,6 @@ function rebirthReset(set_tab_to_jobs = true) {
         item.isHero = false
     }
 
-    /*
     for (const key in gameData.requirements) {
         const requirement = gameData.requirements[key]
         if (requirement.completed && (permanentUnlocks.includes(key) || metaverseUnlocks.includes(key))) continue
@@ -958,7 +957,6 @@ function rebirthReset(set_tab_to_jobs = true) {
         if (gameData.rebirthOneCount == 0)
             gameData.rebirthOneCount = 1
     }
-    */
 }
 
 function getLifespan() {
