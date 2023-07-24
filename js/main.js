@@ -707,10 +707,12 @@ function rebirthTwo() {
     rebirthReset()
     gameData.active_challenge = ""
 
+    /*
     for (const taskName in gameData.taskData) {
         const task = gameData.taskData[taskName]
         task.maxLevel = 0
     }
+    */
 }
 
 function rebirthThree() {
@@ -720,19 +722,22 @@ function rebirthThree() {
         gameData.essence = 1e308
     gameData.evil = evilTranGain()
 
-
+    
     if (gameData.stats.fastest3 == null || gameData.rebirthThreeTime < gameData.stats.fastest3)
         gameData.stats.fastest3 = gameData.rebirthThreeTime
     gameData.rebirthOneTime = 0
     gameData.rebirthTwoTime = 0
     gameData.rebirthThreeTime = 0
 
+    /*
     const recallEffect = gameData.taskData["Cosmic Recollection"].getEffect();
 
+    
     for (const taskName in gameData.taskData) {
         const task = gameData.taskData[taskName]
         task.maxLevel = Math.floor(recallEffect * task.level);
     }
+    */
 
     rebirthReset()
     gameData.active_challenge = ""
@@ -740,16 +745,20 @@ function rebirthThree() {
 
 function rebirthFour() {
     gameData.rebirthFourCount += 1
+    /*
     gameData.essence = 0
     gameData.evil = 0
+    */
     gameData.dark_matter += getDarkMatterGain()
 
+    /*
     if (gameData.metaverse.challenge_altar == 0 && gameData.perks.save_challenges == 0)  {
         for (const challenge in gameData.challenges) {
             gameData.challenges[challenge] = 0
         }
         gameData.requirements["Challenges"].completed = false
     }
+    */
 
     if (gameData.stats.fastest4 == null || gameData.rebirthFourTime < gameData.stats.fastest4)
         gameData.stats.fastest4 = gameData.rebirthFourTime
@@ -760,10 +769,12 @@ function rebirthFour() {
 
     rebirthReset()
 
+    /*
     for (const taskName in gameData.taskData) {
         const task = gameData.taskData[taskName]
         task.maxLevel = 0
     }
+    */
 
     gameData.active_challenge = ""
 }
@@ -771,6 +782,7 @@ function rebirthFour() {
 function rebirthFive() {
     gameData.rebirthFiveCount += 1
     gameData.perks_points += getMetaversePerkPointsGain()
+    /*
     gameData.essence = 0
     gameData.evil = 0
     gameData.dark_matter = 0
@@ -791,26 +803,33 @@ function rebirthFive() {
         gameData.dark_matter_shop.explosion_of_the_universe = 0
         gameData.dark_matter_shop.multiverse_explorer = 0
     }
+    */
 
+    /*
     if (gameData.perks.save_challenges == 0) {
         for (const challenge in gameData.challenges) {
             gameData.challenges[challenge] = 0
         }
         gameData.requirements["Challenges"].completed = false
     }
+    */
 
+    /*
     gameData.requirements["Dark Matter"].completed = false
     gameData.requirements["Dark Matter Skills"].completed = false
     gameData.requirements["Dark Matter Skills2"].completed = false
+    */
 
 
     if (gameData.stats.fastest5 == null || gameData.rebirthFiveTime < gameData.stats.fastest5)
         gameData.stats.fastest5 = gameData.rebirthFiveTime
+    
     gameData.rebirthOneTime = 0
     gameData.rebirthTwoTime = 0
     gameData.rebirthThreeTime = 0
     gameData.rebirthFourTime = 0
     gameData.rebirthFiveTime = 0
+    /*
 
     gameData.boost_active = false
     gameData.boost_timer = 0
@@ -824,14 +843,17 @@ function rebirthFive() {
     gameData.metaverse.evil_tran_gain = 0
     gameData.metaverse.essence_gain_modifier = 0
     gameData.metaverse.challenge_altar = 0
-    gameData.metaverse.dark_mater_gain_modifer = 0    
+    gameData.metaverse.dark_mater_gain_modifer = 0 
+    */
 
     rebirthReset()
 
+    /*
     for (const taskName in gameData.taskData) {
         const task = gameData.taskData[taskName]
         task.maxLevel = 0
     }
+    */
 
     gameData.active_challenge = ""
 }
@@ -892,9 +914,10 @@ function rebirthReset(set_tab_to_jobs = true) {
             setTab("jobs")
     }
 
-    gameData.coins = 0
+    //gameData.coins = 0
     gameData.days = 365 * 14
     gameData.realtime = 0
+    /*
     gameData.currentJob = gameData.taskData["Beggar"]
     gameData.currentProperty = gameData.itemData["Homeless"]
     gameData.currentMisc = []
@@ -904,8 +927,10 @@ function rebirthReset(set_tab_to_jobs = true) {
     gameData.stats.EvilPerSecond = 0
     gameData.stats.maxEvilPerSecond = 0
     gameData.stats.maxEvilPerSecondRt = 0
+    */
     autoBuyEnabled = true
 
+    /*
     for (const taskName in gameData.taskData) {
         const task = gameData.taskData[taskName]
         if (task.level > task.maxLevel) task.maxLevel = task.level
@@ -915,12 +940,16 @@ function rebirthReset(set_tab_to_jobs = true) {
         task.isHero = false
         task.isFinished =false
     }
+    */
 
+    /*
     for (const itemName in gameData.itemData) {
         var item = gameData.itemData[itemName]
         item.isHero = false
     }
+    */
 
+    /*
     for (const key in gameData.requirements) {
         const requirement = gameData.requirements[key]
         if (requirement.completed && (permanentUnlocks.includes(key) || metaverseUnlocks.includes(key))) continue
@@ -933,6 +962,7 @@ function rebirthReset(set_tab_to_jobs = true) {
         if (gameData.rebirthOneCount == 0)
             gameData.rebirthOneCount = 1
     }
+    */
 }
 
 function getLifespan() {
