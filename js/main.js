@@ -914,13 +914,13 @@ function rebirthReset(set_tab_to_jobs = true) {
             setTab("jobs")
     }
 
-    //gameData.coins = 0
+    gameData.coins = 0
     gameData.days = 365 * 14
     gameData.realtime = 0
-    /*
     gameData.currentJob = gameData.taskData["Beggar"]
     gameData.currentProperty = gameData.itemData["Homeless"]
     gameData.currentMisc = []
+    /*
     gameData.stats.EssencePerSecond = 0
     gameData.stats.maxEssencePerSecond = 0
     gameData.stats.maxEssencePerSecondRt = 0
@@ -930,7 +930,6 @@ function rebirthReset(set_tab_to_jobs = true) {
     */
     autoBuyEnabled = true
 
-    /*
     for (const taskName in gameData.taskData) {
         const task = gameData.taskData[taskName]
         if (task.level > task.maxLevel) task.maxLevel = task.level
@@ -938,16 +937,13 @@ function rebirthReset(set_tab_to_jobs = true) {
         task.xp = 0
         task.xpBigInt = BigInt(0)
         task.isHero = false
-        task.isFinished =false
+        task.isFinished = false
     }
-    */
 
-    /*
     for (const itemName in gameData.itemData) {
         var item = gameData.itemData[itemName]
         item.isHero = false
     }
-    */
 
     /*
     for (const key in gameData.requirements) {
